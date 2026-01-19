@@ -5,52 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/techwave.css">
 </head>
 
 <body class="inter-font">
 
-    <body class="work-sans-font">
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header-bg">
+        <nav class="navbar display-flex">
+            <h2 class="brand">Tech<span class="text-gradient">Wave</span></h2>
 
-        <!-- ================= HEADER / NAVBAR ================= -->
-        <header class="header-bg">
-            <nav class="navbar display-flex">
-                <h2 class="brand">Tech<span class="text-gradient">Wave</span></h2>
+            <input type="checkbox" id="menu-toggle" />
 
-                <ul class="nav-links display-flex">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Episodes</a></li>
-                    <li><a href="#">Host</a></li>
-                </ul>
+            <!-- HAMBURGER ICON -->
+            <label for="menu-toggle" class="hamburger">
+                <img src="./assets/hamburger-menu.png" alt="menu">
+            </label>
 
-                <button class="btn-gradient">Subscribe</button>
-                <!-- Hamburger -->
-                <img src="./assets/hamburger-menu.png" alt="menu" class="hamburger">
-            </nav>
+            <ul class="nav-links display-flex">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Host</a></li>
+            </ul>
 
-            <!-- ================= BANNER ================= -->
-            <section class="banner">
-                <div class="banner-content">
-                    <div class="podcast-circle">
-                        <span class="badge-new">NEW</span>
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
+            <button class="btn-gradient nav-btn"><span class="btn-nav">Subscribe</span><i
+                    class="fa-solid fa-arrow-right"></i></button>
+            <!-- Hamburger -->
+        
 
-                    <h1 class="banner-title">TechWave</h1>
-                    <p class="banner-description">
-                        Your daily dose of tech insights, productivity hacks,
-                        and personal growth from industry leaders.
-                    </p>
+        </nav>
 
-                    <div class="banner-buttons">
-                        <button class="btn-gradient">Listen on Spotify</button>
-                        <button class="btn-outline">Subscribe</button>
-                    </div>
-                </div>
-            </section>
-        </header>
+        <!-- ================= BANNER ================= -->
+
+        <section class="banner">
+            <!-- Background -->
+            <div class="banner-bg"></div>
+
+            <!-- Podcast Circle -->
+            <div class="podcast-circle">
+                <img class="mic" src="./assets/microphone.png" alt="Mic">
+                <span class="badge-new">NEW</span>
+            </div>
+
+            <h1 class="banner-title">TechWave</h1>
+
+            <p class="banner-description">
+                Your daily dose of tech insights, productivity hacks, and personal growth from industry leaders.
+            </p>
+
+            <div class="banner-buttons display-flex">
+                <button class="btn-gradient">
+                    <i class="fa-brands fa-spotify"></i> Listen on Spotify
+                </button>
+                <button class="btn-secondary"><i class="fa-regular fa-envelope"></i> Subscribe</button>
+            </div>
+        </section>
+        <!-- About Section -->
 
 
-    </body>
+    </header>
+
+
+</body>
 
 </html>

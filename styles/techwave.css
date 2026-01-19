@@ -2,15 +2,19 @@
 
 
 .inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 .display-flex {
     display: flex;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 /* ===== COLORS ===== */
@@ -19,46 +23,152 @@ body {
     color: rgba(255, 255, 255, 1);
 }
 
-/*.header-bg {
+.header-bg {
     background: radial-gradient(circle at top, #2a0a52, #12001f);
     color: white;
 }
 
 .text-gradient {
-    background: linear-gradient(45deg, #ff4ecd, #7f5bff);
+
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
     -webkit-background-clip: text;
     color: transparent;
-}*/
+}
 
-/* ===== NAVBAR ===== */
-/* ===== NAVBAR (FIGMA MATCH) ===== */
+/* ------ BUTTONS Section-------*/
+.btn-gradient {
+
+    border: none;
+    padding: 12px 24px;
+    gap: 10px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background: linear-gradient(90deg,
+            rgba(247, 233, 63, 1),
+            rgba(251, 9, 180, 1),
+            rgba(145, 0, 248, 1));
+}
+
+
+
+
+.btn-gradient i {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.btn-nav {
+    width: 79px;
+    height: 19px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.btn-banner {
+    width: 133px;
+    height: 19px;
+    display: flex;
+    font-style: Semi Bold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    width: 147px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #00FF88;
+    border-radius: 100px;
+    background: transparent;
+    color: #00FF88;
+
+}
+
+.btn-secondary i {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+}
+
+.banner-buttons{
+    gap :8px;
+}
+
+
+/* ---------- NAVBAR ----------- */
+
 .navbar {
     max-width: 1600px;
     height: 92px;
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 16px 200px;
     box-sizing: border-box;
-
     background: rgba(26, 11, 46, 1);
     border-bottom: 1px solid rgba(65, 37, 103, 1);
 }
 
+.brand {
+    width: 219px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid rgba(0, 0, 0, 1);*/
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
 
 .nav-links {
-    list-style: none;
+    width: 218px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     gap: 30px;
+    list-style: none;
+
 }
 
 .nav-links a {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
+
+    font-size: 16px;
     font-weight: 500;
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+
 }
+
+.nav-links a:hover {
+    color: #FB09B4;
+}
+
 
 .hamburger {
     width: 28px;
@@ -68,95 +178,245 @@ body {
 }
 
 
-/* ===== BUTTONS ===== */
-.btn-gradient {
-    background: linear-gradient(45deg, #ff4ecd, #7f5bff);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s;
+
+
+/* Banner Section */
+.banner-wrapper {
+    width: 100%;
+    background: #12001f;
+   
 }
 
-.btn-gradient:hover {
-    transform: scale(1.05);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid #7f5bff;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-}
-
-/* ===== BANNER ===== */
 .banner {
-    text-align: center;
-    padding: 100px 20px;
+   
+
+    width: 100%;
+    max-width: 1600px;
+    height: 760px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: url('../assets/hero-bg.png') center / cover no-repeat;
 }
 
 .podcast-circle {
-    width: 160px;
-    height: 160px;
-    background: linear-gradient(45deg, #ff4ecd, #ffc371);
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    margin: auto;
-    position: relative;
+
+    background: url('../assets/hero-circle.png') center / cover no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    z-index: 2;
 }
 
-.podcast-circle i {
-    font-size: 60px;
+.mic {
+    width: 150px;
+    height: 150px;
+    z-index: 3;
 }
 
 .badge-new {
     position: absolute;
-    top: 10px;
-    right: -10px;
+    top: 24px;
+    right: -16px;
     background: #00ff9c;
-    color: black;
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 20px;
+    color: #1A0B2E;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 999px;
+    line-height: 22px;
+    white-space: nowrap;
+    z-index: 5;
 }
 
+.banner-title {
+    width: 550px;
+    height: 73px;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 73px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 24px auto 12px;
+    z-index: 2;
+}
 
+.banner-description {
+    width: 550px;
+    height: 19px;
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+
+    margin: 0 auto 36px;
+    z-index: 2;
+}
 
 @media screen and (max-width: 576px) {
-
     .navbar {
         padding: 16px 20px;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1000;
     }
 
-    .desktop-btn {
-        display: none;
+    .brand {
+        justify-content: flex-start;
     }
 
     .hamburger {
-        display: flex;
+        display: block;
     }
 
+    .navbar .nav-btn {
+        display: none;
+    }
     .nav-links {
+        display: none;
         position: absolute;
         top: 92px;
         left: 0;
         width: 100%;
-        background: rgba(26, 11, 46, 1);
-
+        padding: 20px 0;
         flex-direction: column;
         gap: 20px;
-        padding: 20px 0;
+        z-index: 2000; 
+    }
 
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Banner er section*/
+    .banner {
+        height: auto;
+        padding: 80px 16px;
+        text-align: center;
+    }
+
+    .podcast-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .mic {
+        width: 110px;
+    }
+
+    .banner-title {
+        width: 100%;
+        height: auto;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .banner-description {
+        width: 100%;
+        height: auto;
+        white-space: normal;
+        font-size: 14px;
+    }
+
+    .banner-buttons {
+        gap: 16px;
+    }
+
+    .btn-gradient,
+    .btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    .navbar {
+        padding: 16px 40px;
+    }
+
+    .brand {
+        font-size: 24px;
+        width: auto;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hamburger {
         display: none;
     }
 
-    /* CSS ONLY TOGGLE */
-    #menu-toggle:checked ~ .nav-links {
-        display: flex;
+    .navbar .btn-gradient {
+        padding: 10px 20px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* ---------- BANNER ---------- */
+    .banner {
+        height: auto;
+        padding: 100px 40px;
+    }
+
+    .podcast-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .mic {
+        width: 120px;
+        height: auto;
+    }
+
+    .banner-title {
+        width: 100%;
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .banner-description {
+        width: 100%;
+        font-size: 15px;
+        white-space: normal;
+    }
+
+    .banner-buttons {
+        gap: 16px;
+    }
+
+    .btn-gradient,
+    .btn-secondary {
+        padding: 12px 20px;
+        font-size: 15px;
+        white-space: nowrap;
     }
 }
