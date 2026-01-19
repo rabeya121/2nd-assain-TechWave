@@ -51,10 +51,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s;
-    background: linear-gradient(90deg,
-            rgba(247, 233, 63, 1),
-            rgba(251, 9, 180, 1),
-            rgba(145, 0, 248, 1));
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
 }
 
 
@@ -281,22 +278,26 @@ body {
 
 /* About Section */
 .about {
-    width:100%;
-   
+    width: 100%;
+
     justify-content: center;
     background: rgba(26, 11, 46, 1);
 }
 
 .about .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 50px 200px 120px 200px;
+    padding: 50px 16px 80px;
+    margin: 0 auto;
+
 }
 
 .about h2 {
-    width: 1200px;
-    height: 58px;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
     color: rgba(255, 255, 255, 1);
     font-size: 48px;
     font-weight: 700;
@@ -304,19 +305,25 @@ body {
     text-align: center;
     text-transform: capitalize;
     margin: 0 0 16px 0;
+    word-break: normal;
+    white-space: normal;
+    text-align: center;
 }
 
 .about-text {
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     color: rgba(255, 255, 255, 1);
     opacity: 0.8;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     text-align: center;
-    margin: 0 0 80px 0;
     white-space: normal;
+    word-break: normal;
+
 }
+
 .about-line {
     max-width: 1200px;
     width: 100%;
@@ -328,7 +335,9 @@ body {
 .card-box {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+
 }
 
 .card-box .box {
@@ -337,11 +346,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-   
+
 }
 
 .card-box .box h3 {
-   width: 240px;
+    width: 240px;
     height: 58px;
     display: flex;
     align-items: center;
@@ -351,18 +360,18 @@ body {
     font-size: 48px;
     font-weight: 800;
     line-height: 58px;
-    
+
 }
 
 .card-box .box h3 i {
     font-size: 32px;
-   
+
 
 }
 
 .card-box .box h3 .fa-plus {
-   
-    font-weight: 900; 
+
+    font-weight: 900;
 }
 
 .card-box .box span {
@@ -375,22 +384,70 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    display: block;
 }
 
+/* why-teach*/
 
 
-/* ===== Responsive ===== */
-@media (max-width: 576px) {
-  .about-title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
+/*-----Footer section---*/
+.footer {
+    width: 100%;
+    height: 360px;
+    background: url("../assets/footer-bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.footer-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.platforms {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.platforms a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.platforms a i {
+    margin-right: 6px;
+}
+
+.platforms a:hover {
+    opacity: 1;
+    color: #fb4cff;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
 
 
 @media screen and (max-width: 576px) {
@@ -472,6 +529,47 @@ body {
         white-space: nowrap;
     }
 
+
+    .about h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+    }
+
+    .card-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .footer {
+        padding: 60px 16px;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .platforms {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 12px 24px;
+        justify-content: center;
+    }
+
+    .copyright {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -540,5 +638,49 @@ body {
         padding: 12px 20px;
         font-size: 15px;
         white-space: nowrap;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .card-box .box {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .card-box .box h3 {
+        font-size: 36px;
+    }
+
+    .card-box .box h3 i {
+        font-size: 24px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 80px 40px;
+    }
+
+    .logo {
+        font-size: 44px;
+        margin-bottom: 18px;
+    }
+
+    .platforms {
+        gap: 20px;
+        margin-bottom: 18px;
+    }
+
+    .platforms a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
     }
 }
