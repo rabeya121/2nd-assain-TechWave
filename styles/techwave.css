@@ -71,6 +71,7 @@ body {
     text-align: left;
     text-transform: capitalize;
 }
+
 .btn-banner {
     width: 133px;
     height: 19px;
@@ -377,6 +378,7 @@ body {
     align-items: center;
     display: block;
 }
+
 /* Techwave section*/
 .techwave {
     background: radial-gradient(circle at top, #2b145d, #120724);
@@ -391,8 +393,6 @@ body {
 }
 
 .techwave h2 {
-    width: 1200px;
-    height: 58px;
     font-size: 48px;
     font-weight: 700;
     text-align: center;
@@ -414,6 +414,7 @@ body {
         "exclusive exclusive resources";
     gap: 24px;
 }
+
 .feature-card {
     background: rgba(53, 17, 101, 0.4);
     border-radius: 40px;
@@ -449,17 +450,20 @@ body {
     grid-area: resources;
     height: 273px;
 }
+
 .feature-icon {
     width: 60px;
     height: 60px;
     object-fit: contain;
 }
+
 .exclusive-icon {
     font-size: 60px;
     background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .feature-card h3 {
     width: 300px;
     height: 29px;
@@ -482,13 +486,13 @@ body {
 }
 
 .feature-card:hover .feature-icon,
-.feature-card:hover .exclusive-icon{
-  transform: scale(1.1) rotate(5deg);
+.feature-card:hover .exclusive-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .feature-icon,
-.exclusive-icon{
-  transition: transform 0.3s ease;
+.exclusive-icon {
+    transition: transform 0.3s ease;
 }
 
 /*The Feature epsod section*/
@@ -513,6 +517,7 @@ body {
     align-items: flex-start;
     gap: 40px;
 }
+
 .feature-techwave h2 {
     width: 1200px;
     max-width: 100%;
@@ -572,10 +577,7 @@ body {
     justify-content: center;
     font-size: 22px;
     color: #fff;
-    background: linear-gradient(47.64deg,
-            rgba(247, 233, 63, 1),
-            rgba(251, 9, 180, 1),
-            rgba(145, 0, 248, 1));
+    background: linear-gradient(48deg, #F7E93F, #FB09B4, #9100F8);
 }
 
 
@@ -762,7 +764,7 @@ body {
     gap: 8px;
 }
 
-/* ===== ICON CIRCLE (Ellipse 4) ===== */
+
 .social a {
     width: 40px;
     height: 40px;
@@ -775,7 +777,7 @@ body {
     text-decoration: none;
 }
 
-/* ===== ICON IMAGE ===== */
+
 .social a img {
     width: 20px;
     height: 20px;
@@ -946,6 +948,54 @@ body {
         gap: 24px;
     }
 
+    /*techwave*/
+    .techwave {
+        padding: 80px 0;
+    }
+
+    .techwave h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "audio"
+            "mobile"
+            "global"
+            "exclusive"
+            "resources";
+    }
+
+    .feature-card {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .exclusive-icon {
+        font-size: 48px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+        line-height: 26px;
+        width: 100%;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+
     .footer {
         padding: 60px 16px;
         height: auto;
@@ -1060,6 +1110,9 @@ body {
         font-size: 24px;
     }
 
+
+
+    /*footer*/
     .footer {
         height: auto;
         padding: 80px 40px;
