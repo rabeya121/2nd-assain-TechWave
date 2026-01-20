@@ -54,9 +54,6 @@ body {
     background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
 }
 
-
-
-
 .btn-gradient i {
     width: 20px;
     height: 20px;
@@ -74,7 +71,6 @@ body {
     text-align: left;
     text-transform: capitalize;
 }
-
 .btn-banner {
     width: 133px;
     height: 19px;
@@ -179,9 +175,6 @@ body {
     display: none;
 }
 
-
-
-
 /* Banner Section */
 .banner-wrapper {
     width: 100%;
@@ -190,8 +183,6 @@ body {
 }
 
 .banner {
-
-
     width: 100%;
     max-width: 1600px;
     height: 760px;
@@ -386,10 +377,7 @@ body {
     align-items: center;
     display: block;
 }
-
-/* why-teach*/
-/* Section */
-/* Grid layout */
+/* Techwave section*/
 .techwave {
     background: radial-gradient(circle at top, #2b145d, #120724);
     padding: 120px 0;
@@ -426,8 +414,6 @@ body {
         "exclusive exclusive resources";
     gap: 24px;
 }
-
-/* Common */
 .feature-card {
     background: rgba(53, 17, 101, 0.4);
     border-radius: 40px;
@@ -463,24 +449,17 @@ body {
     grid-area: resources;
     height: 273px;
 }
-
-
-
-/* ICON */
 .feature-icon {
     width: 60px;
     height: 60px;
     object-fit: contain;
 }
-
 .exclusive-icon {
     font-size: 60px;
     background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
     -webkit-background-clip: text;
     color: transparent;
 }
-
-/* TEXT */
 .feature-card h3 {
     width: 300px;
     height: 29px;
@@ -501,6 +480,313 @@ body {
     line-height: 24px;
     opacity: 0.7;
 }
+
+.feature-card:hover .feature-icon,
+.feature-card:hover .exclusive-icon{
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-icon,
+.exclusive-icon{
+  transition: transform 0.3s ease;
+}
+
+/*The Feature epsod section*/
+.feature-techwave {
+    width: 1600px;
+    max-width: 100%;
+    padding: 120px 200px;
+    background: rgba(26, 11, 46, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+
+}
+
+.feature-episode {
+    width: 1200px;
+    height: 538px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+.feature-techwave h2 {
+    width: 1200px;
+    max-width: 100%;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: capitalize;
+
+}
+
+.episode-grid {
+    width: 1200px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.episode-card {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumb {
+    width: 380px;
+    height: 214px;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.play i {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    background: linear-gradient(47.64deg,
+            rgba(247, 233, 63, 1),
+            rgba(251, 9, 180, 1),
+            rgba(145, 0, 248, 1));
+}
+
+
+.card-body {
+    width: 380px;
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px;
+    border-radius: 0 0 24px 24px;
+    background: rgba(37, 13, 68, 1);
+}
+
+.card-body h3 {
+    width: 332px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin: 0;
+    color: #fff;
+}
+
+
+.card-body p {
+    width: 332px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    color: #fff;
+    opacity: .6;
+}
+
+
+.card-body .time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.card-body .time img {
+    width: 20px;
+    height: 20px;
+}
+
+.card-body .time span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: rgba(0, 255, 136, 1);
+}
+
+/*vedio section*/
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .85);
+    display: none;
+    z-index: 9999;
+}
+
+.modal:target {
+    display: grid;
+    place-items: center;
+}
+
+.modal-box {
+    width: 800px;
+    max-width: 90%;
+    position: relative;
+}
+
+.modal iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 24px;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* meet the host section */
+
+.host-meet {
+    width: 1200px;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+
+.host-meet h2 {
+    width: 1200px;
+    max-width: 100%;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.host-card {
+    width: 1200px;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 48px;
+    border-radius: 40px;
+    background: rgba(53, 17, 101, 0.4);
+}
+
+.host-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.host-info {
+    width: 780px;
+    height: 183px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.host-info h3 {
+    width: 896px;
+    max-width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.host-info p {
+    width: 896px;
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 0%;
+}
+
+
+.social {
+    width: 184px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* ===== ICON CIRCLE (Ellipse 4) ===== */
+.social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(83, 60, 114, 1);
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* ===== ICON IMAGE ===== */
+.social a img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.social a:hover img {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
 
 
 /*-----Footer section---*/
