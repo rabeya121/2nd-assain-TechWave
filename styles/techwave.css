@@ -388,6 +388,119 @@ body {
 }
 
 /* why-teach*/
+/* Section */
+/* Grid layout */
+.techwave {
+    background: radial-gradient(circle at top, #2b145d, #120724);
+    padding: 120px 0;
+    color: #fff;
+}
+
+.techwave .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.techwave h2 {
+    width: 1200px;
+    height: 58px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 64px;
+    line-height: 58px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* GRID */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 380px 410px 380px;
+    grid-template-areas:
+        "audio mobile mobile"
+        "audio global global"
+        "exclusive exclusive resources";
+    gap: 24px;
+}
+
+/* Common */
+.feature-card {
+    background: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.feature-card.large {
+    grid-area: audio;
+    height: 480px;
+}
+
+.feature-card.mobile {
+    grid-area: mobile;
+    height: 225px;
+}
+
+.feature-card.global {
+    grid-area: global;
+    height: 225px;
+}
+
+.feature-card.exclusive {
+    grid-area: exclusive;
+    height: 273px;
+}
+
+.feature-card.resources {
+    grid-area: resources;
+    height: 273px;
+}
+
+
+
+/* ICON */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.exclusive-icon {
+    font-size: 60px;
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* TEXT */
+.feature-card h3 {
+    width: 300px;
+    height: 29px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.feature-card p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+    letter-spacing: 0%;
+    line-height: 24px;
+    opacity: 0.7;
+}
 
 
 /*-----Footer section---*/
